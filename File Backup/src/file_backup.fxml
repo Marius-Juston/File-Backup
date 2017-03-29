@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" minHeight="71.0" minWidth="343.0" prefHeight="381.0" prefWidth="343.0"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="Controller">
+    <bottom>
+        <HBox alignment="CENTER" spacing="8.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets left="8.0" right="8.0"/>
+            </padding>
+            <Button id="addButton" fx:id="addFileButton" mnemonicParsing="false" onAction="#openFileBrowser"
+                    text="ADD FILE"/>
+            <Button id="addButton" fx:id="addFolderButton" mnemonicParsing="false" onAction="#openFolderBrowser"
+                    text="ADD FOLDER"/>
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeItems" text="REMOVE"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="backupButton" mnemonicParsing="false" onAction="#backup" text="BACKUP"/>
+        </HBox>
+    </bottom>
+    <center>
+        <ListView fx:id="fileListView"/>
+    </center>
+    <top>
+        <MenuBar/>
+    </top>
+</BorderPane>
